@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Event</title>
+  </head>
+  <body>
+    <h2 id="text">Click the button to change my color!</h2>
+    <button id="changeColor">Red Color</button>
+    <button onclick="BlueColor()">Blue Color</button>
+
+    <script>
+      let text = document.getElementById("text");
+      let button = document.getElementById("changeColor");
+
+      button.addEventListener("click", ChangeColor);
+
+      function ChangeColor() {
+        text.style.color = "red";
+      }
+
+      function BlueColor(){
+         text.style.color = "blue";
+      }
+    </script>
+  </body>
+</html>

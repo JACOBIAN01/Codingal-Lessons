@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        
+        <h1 id="text">Hello Fatimah</h1>
+
+        <button onclick="TextRed()">Red</button>
+        <button onclick="TextBlue()">Blue</button>
+
+        <h1>What is the Capital of Pakistan ?</h1>
+        <button onclick="Wrong()">Lahore</button>
+        <button onclick="Wrong()">Karachi</button>
+        <button onclick="Right()">Islamabad</button>
+        <h2 id="result"></h2>
+
+        <script>
+
+            function TextRed(){
+                document.getElementById("text").style.color = "red";
+            }
+
+            function TextBlue(){
+                document.getElementById("text").style.color = "blue"
+            }
+
+            function Wrong(){
+                document.getElementById("result").innerHTML = "Wrong Answer"
+            }
+
+            function Right(){
+                  document.getElementById("result").innerHTML = "RIght Answer"
+            }
+
+        </script>
+
+    </body>
+</html>

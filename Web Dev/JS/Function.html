@@ -4,34 +4,27 @@
     </head>
     <body>
         
-        <h1 id="text">Hello Fatimah</h1>
+        <h1 id="text">Hello Apshara</h1>
 
-        <button onclick="TextRed()">Red</button>
-        <button onclick="TextBlue()">Blue</button>
-
-        <h1>What is the Capital of Pakistan ?</h1>
-        <button onclick="Wrong()">Lahore</button>
-        <button onclick="Wrong()">Karachi</button>
-        <button onclick="Right()">Islamabad</button>
-        <h2 id="result"></h2>
+        <button onclick="Red()">Red</button>
+        <button onclick="Blue()">Blue</button>
+        <button onclick="Green()">Green</button>
 
         <script>
 
-            function TextRed(){
-                document.getElementById("text").style.color = "red";
+            function Red(){
+                document.getElementById("text").style.color = "red"
             }
-
-            function TextBlue(){
+            
+            function Blue(){
                 document.getElementById("text").style.color = "blue"
             }
-
-            function Wrong(){
-                document.getElementById("result").innerHTML = "Wrong Answer"
+            
+            function Green(){
+                document.getElementById("text").style.color = "green"
             }
 
-            function Right(){
-                  document.getElementById("result").innerHTML = "RIght Answer"
-            }
+
 
         </script>
 

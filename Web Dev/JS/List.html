@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Arisha's Shopping</title>
+  </head>
+  <body>
+    <h1>Cart</h1>
+    <h1 id="count">0</h1>
+    <h2 id="items"></h2>
+
+    <div>
+      <button onclick="AddtoCart(0)">Apple</button>
+      <button onclick="AddtoCart(1)">Banana</button>
+      <button onclick="AddtoCart(2)">Cherry</button>
+      <button onclick="AddtoCart(3)">Watermelon</button>
+    </div>
+
+    <script>
+      let fruits = ["Apple", "Banana", "Cherry", "Watermelon"];
+
+      let cart = [];
+      var count = document.getElementById("count");
+      var items = document.getElementById("items");
+
+      function AddtoCart(i) {
+        cart.push(fruits[i]);
+        count.innerHTML = cart.length;
+        items.innerHTML = cart;
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Driving License Check</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-rose-100 font-sans flex justify-center items-center">
+    <div
+      class="bg-white text-center space-y-4 p-6 rounded-xl shadow-gray shadow-2xl"
+    >
+      <h1 class="text-2xl font-bold text-rose-700 text-center">
+        Driving License Eligibility Check
+      </h1>
+      <p class="text-md font-semibold text-center">Enter Your Age</p>
+      <input
+        id="ageInput"
+        class="bg-white text-center font-bold px-2 py-2 rounded-3xl border-2 border-rose-500 text-md"
+        type="number"
+        placeholder="Enter Your Age Here"
+      />
+      <br />
+      <button
+        onclick="CheckAge()"
+        class="bg-rose-600 text-white text-center px-3 py-1 rounded-xl font-bold"
+      >
+        Check
+      </button>
+      <p
+        id="result"
+        class="text-xl text-center font-semibold text-white rounded-3xl"
+      >
+        Result
+      </p>
+    </div>
+
+    <script>
+      function CheckAge() {
+        let age = document.getElementById("ageInput").value;
+        if (age > 18) {
+          document.getElementById("result").innerHTML = "You Are Eligible";
+          document.getElementById("result").classList.add("bg-green-400");
+        } else {
+          document.getElementById("result").innerHTML = "You Are Not Eligible";
+          document.getElementById("result").classList.add("bg-rose-400");
+        }
+      }
+    </script>
+  </body>
+</html>

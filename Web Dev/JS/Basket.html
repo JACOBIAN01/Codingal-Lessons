@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Fruit Basket</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-cyan-50 font-sans">
+    <header class="flex justify-between items-center bg-yellow-300 px-5 py-3">
+      <h1 class="text-2xl font-bold text-rose-700">Fruit Basket</h1>
+      <div class="flex items-center gap-5">
+        <button
+          onclick="ShowCart()"
+          class="bg-rose-600 px-2 py-1 text-white rounded-lg font-semibold hover:bg-rose-500"
+        >
+          View Cart
+        </button>
+        <h1 class="font-bold text-3xl" id="count">0</h1>
+      </div>
+    </header>
+
+    <div id="myCart" class="bg-yellow-400 h-30 w-full text-center hidden">
+      <h1 class="text-center text-2xl font-bold text-rose-700">My Items</h1>
+      <h1 id="item" class="text-xl font-bold"></h1>
+      <button
+        onclick="HideCart()"
+        class="bg-rose-600 px-2 py-1 text-white rounded-lg font-semibold hover:bg-rose-500 mt-5"
+      >
+        Close
+      </button>
+    </div>
+
+    <main class="flex justify-center items-center gap-10 mt-6">
+      <div class="bg-cyan-300 h-43 w-35 text-center rounded-2xl p-2 space-y-2">
+        <img
+          class="h-28 w-28 rounded-3xl border-yellow-500 border-3 mx-auto"
+          src="https://img.freepik.com/free-psd/close-up-delicious-apple_23-2151868338.jpg?semt=ais_hybrid&w=740&q=80"
+          alt=""
+        />
+        <button
+          onclick="addToCart('apple')"
+          class="bg-cyan-700 px-2 py-1 rounded-md text-white hover:bg-cyan-600"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <div class="bg-cyan-300 h-43 w-35 text-center rounded-2xl p-2 space-y-2">
+        <img
+          class="h-28 w-28 rounded-3xl border-yellow-500 border-3 mx-auto"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREL-8788jl8vQerRj-pw3_XJ2gs5tJUvRJrw&s"
+          alt=""
+        />
+        <button
+          onclick="addToCart('banana')"
+          class="bg-cyan-700 px-2 py-1 rounded-md text-white hover:bg-cyan-600"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <div class="bg-cyan-300 h-43 w-35 text-center rounded-2xl p-2 space-y-2">
+        <img
+          class="h-28 w-28 rounded-3xl border-yellow-500 border-3 mx-auto"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVBCjgi5hcKY-cKhWTgxu7VaPcd8F82qxwYQ&s"
+          alt=""
+        />
+        <button
+          onclick="addToCart('cherry')"
+          class="bg-cyan-700 px-2 py-1 rounded-md text-white hover:600"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </main>
+
+    <script>
+      var cart = [];
+      var count = document.getElementById("count");
+      var myItem = document.getElementById("item");
+
+      function addToCart(item) {
+        cart.push(item);
+        count.innerHTML = cart.length;
+      }
+
+      function ShowCart() {
+        document.getElementById("myCart").classList.remove("hidden");
+        myItem.innerHTML = cart;
+      }
+
+      function HideCart() {
+        document.getElementById("myCart").classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>

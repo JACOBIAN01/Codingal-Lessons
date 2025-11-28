@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Function</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+
+    <div id="body" class="bg-gray-800 p-5 flex justify-center items-center border-black border-3">
+      <h1 id="text" class="text-white font-semibold text-2xl">Hello Arisha</h1>
+    </div>
+
+    <div class="flex justify-center items-center p-2">
+      <button onclick="Dark()" class="bg-gray-800 text-white px-3 py-1 rounded-md m-10 hover:bg-gray-700">Dark</button>
+      <button onclick="Light()" class="bg-gray-800 text-white px-3 py-1 rounded-md m-10 hover:bg-gray-700">Light</button>
+    </div>
+
+
+    <script>
+
+        const body = document.getElementById("body");
+        const text = document.getElementById("text");
+
+        function Light(){
+            body.classList.remove("bg-gray-800");
+            body.classList.add("bg-gray-100")
+
+            text.classList.remove("text-white");
+            text.classList.add("text-gray-800")
+        }
+
+         function Dark(){
+            body.classList.add("bg-gray-800");
+            body.classList.remove("bg-gray-100")
+
+            text.classList.add("text-white");
+            text.classList.remove("text-gray-800")
+        }
+
+
+    </script>
+  </body>
+</html>

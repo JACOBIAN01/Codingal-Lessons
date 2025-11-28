@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Array</title>
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+
+        <div class="flex justify-center items-center mt-5 gap-5">
+            <div class="bg-gray-500 p-2 h-35 w-30 text-center">
+                <h2 class="text-xl text-white">Apple</h2>
+                <button class="bg-gray-200 px-2 py-1 rounded-xl mt-2" onclick="AddItem('Apple')">Add to Cart</button>
+                <button class="bg-gray-200 px-2 py-1 rounded-xl mt-2">Remove</button>
+            </div>
+             <div class="bg-gray-500 p-2 h-35 w-30 text-center">
+                <h2 class="text-xl text-white">Cherry</h2>
+                <button class="bg-gray-200 px-2 py-1 rounded-xl mt-2" onclick="AddItem('Cherry')">Add to Cart</button>
+                <button class="bg-gray-200 px-2 py-1 rounded-xl mt-2">Remove</button>
+            </div>
+             <div class="bg-gray-500 p-2 h-35 w-30 text-center">
+                <h2 class="text-xl text-white">Banana</h2>
+                <button class="bg-gray-200 px-2 py-1 rounded-xl mt-2" onclick="AddItem('Banana')">Add to Cart</button>
+                <button class="bg-gray-200 px-2 py-1 rounded-xl mt-2">Remove</button>
+            </div>
+        </div>
+
+        <div class="text-3xl font-semibold text-center mt-4">
+            <h1>Basket</h1>
+            <h2 id="basket"></h2>
+        </div>
+        
+
+        <script>
+            
+            let fruits = ["Apple","Banana","Cherry","Guava","Watermelon"]
+
+            let friends = ["Fatima","Sidra","Hurain","Ayesha"]
+
+            let colors = ["Red","Black","Pink","Green","Yellow"]
+
+            let cars = ["Honda","Nissan","Audi","BMW","Ferarri"]
+
+          let basket = []
+            function AddItem(item){
+                basket.push(item)
+                let mybasket = document.getElementById("basket")
+                mybasket.textContent = basket
+            }
+
+
+
+
+            
+
+
+            
+
+
+
+
+        </script>
+    </body>
+</html>

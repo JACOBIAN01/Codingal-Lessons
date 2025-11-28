@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 id="text">Hello Arisha</h1>
+    <h1 id="mytext">Change this content</h1>
+
+    <h1 id="text2">Click the button to change the Content</h1>
+    <button onclick="ChangeText()">Click Here</button>
+
+    <h1>What is the Capital of Bangladesh?</h1>
+    <button onclick="Correct()">Dhaka</button>
+    <button onclick="Wrong()">Rajshahi</button>
+    <h1 id="result"></h1>
+
+    <script>
+      let MyTag = document.getElementById("text");
+      MyTag.textContent = "Hello From DOM";
+
+      let MyTag2 = document.getElementById("mytext");
+      MyTag2.textContent = "Content Changed!";
+
+      function ChangeText() {
+        let MyText = document.getElementById("text2");
+        MyText.textContent = "Content Changed!";
+      }
+
+      function Correct() {
+        let Answer = document.getElementById("result");
+        Answer.textContent = "Correct Answer";
+      }
+      function Wrong() {
+        let Answer = document.getElementById("result");
+        Answer.textContent = "Wrong Answer";
+      }
+    </script>
+  </body>
+</html>
